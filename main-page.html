@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="tmb-mainContainer">
+            <div class="tmb-header">
+                <span id="GoFileUpload"></span>
+                <span id="mainPageHeader">File upload</span>
+            </div>
+            <div id="FileUploadContainer" class="tmb-mainFileUploadContainerContent">
+                <!--<input webkitdirectory directory style="display: none" accept=".xml" multiple="multiple" name="files[]" type="file" id="file-input" onchange="makeFileList(this);">-->
+                <input style="display: none" accept=".xml" multiple="multiple" name="files[]" type="file" id="file-input" onchange="makeFileList(this);">
+                <button onclick="document.getElementById('file-input').click();" class="tmb-signInButton">Upload files</button>&nbsp;&nbsp;
+                <button class="tmb-signInButton">Upload path</button>
+                <br>
+                <br>
+                <br>
+                <div id="FileVerificationProcess" style="display: none;justify-content: center" onclick="FileUploadVerification();">
+                    <button class="tmb-signInButton">Verification</button>
+                </div>
+            </div>
+            <div id="FileVerificationContainer" class="tmb-mainFileVerificationContainerContent">
+                <div>
+                    <table id="FileVerificationTable"></table>
+                </div>
+                <div style="padding-top: 10px; font-weight: bold">
+                    <div>(V - verified / P - Pending)</div>
+                    <br>
+                    <div>*Select files to be verified</div>
+                </div>
+                <br>
+                <div style="display: flex;justify-content: center" onclick="FileVerificationProcess();">
+                    <button class="tmb-signInButton">Process</button>
+                </div>
+            </div>
+            <div id="RecordVerificationContainer" class="tmb-mainRecordVerificationContainer">
+                <div>
+                    <div class="tmb-itemName">File Name</div>
+                    <input class="tmb-inputBox" type="text" name="fileName"/>
+                </div>
+                <br>
+                <div>
+                    <div class="tmb-itemName">Account Number</div>
+                    <input class="tmb-inputBox" type="number" name="accountNumber"/>
+                </div>
+                <br>
+                <div>
+                    <div class="tmb-itemName">Aadhaar Number</div>
+                    <input class="tmb-inputBox" type="number" name="accountNumber"/>
+                </div>
+                <br>
+                <div style="display: flex;justify-content: center" onclick="FileVerificationProcess();">
+                    <button class="tmb-signInButton">Process</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
