@@ -1,0 +1,168 @@
+/*
+default the root elements
+*/
+html, body
+{
+    margin: 0px; /*undo default margin*/
+    width: 100%; /*set to full width*/
+}
+
+/*
+default height for HTML element
+*/
+html
+{
+    height: 100vh; /*100% of viewport hieght*/
+}
+
+/*
+default height for BODY element. For any computation of height in TS files,
+one should use VIEWPORT / BODY height but not DOCUMENT / HTML height.
+*/
+body
+{
+    min-height: 100vh; /*100% of viewport hieght*/
+    background-color: #2B3137;
+    user-select: none;
+    cursor: default;
+    font-size: medium;
+}
+
+.tmb-mainContainer
+{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.tmb-header
+{
+    text-align: center;
+    background-color: #24292E;
+    font-size: medium;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.tmb-itemName
+{
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.tmb-itemName
+{
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.tmb-inputBox
+{
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    border-radius: 5px;
+    width: 90%;
+    outline: none;
+}
+
+.tmb-signInButton
+{
+    border: none;
+    padding: 7px;
+    background-color: #4CAF50;
+    color: whitesmoke;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tmb-signInButton:hover
+{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.tmb-loginContainerContent
+{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.tmb-invalidMessage
+{
+    padding: 10px 0;
+    color: red;
+    visibility: hidden;
+}
+
+.tmb-mainFileUploadContainerContent
+{
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.tmb-mainFileVerificationContainerContent
+{
+    display: none;
+    background-color: white;
+    padding: 10px;
+}
+
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td 
+{
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even):hover
+{
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+tr:nth-child(odd):hover
+{
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+tr:nth-child(odd)
+{
+    background-color: #e6e6e6;
+}
+
+th 
+{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tmb-mainRecordVerificationContainer
+{
+    display: none;
+    background-color: white;
+    padding: 10px;
+}
+
+input:focus 
+{
+    border-color: #333333;
+}
+
